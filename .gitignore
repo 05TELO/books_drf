@@ -1,0 +1,14 @@
+**/.coverage
+**/__pycache__
+**/db.sqlite3*
+*.bak
+*.swp
+*~
+.DS_Store
+.env
+.idea
+.py[co]
+.venv
+.vscode
+venv
+.mypy_cache
