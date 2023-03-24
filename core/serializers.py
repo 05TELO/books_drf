@@ -16,13 +16,7 @@ class BookSerializer(serializers.ModelSerializer):
             "slug",
             "authors",
         )
-        validators = [
-            UniqueTogetherValidator(
-                queryset=Book.objects.all(),
-                fields=["title", "authors"],
-                message="This book already exists",
-            )
-        ]
+
         lookup_field = "slug"
         extra_kwargs = {"url": {"lookup_field": "slug"}}
 
