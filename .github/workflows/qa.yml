@@ -34,3 +34,9 @@ jobs:
       - name: 📊 Tests are passed.
         run: |
           poetry run python manage.py test core
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        with:
+          name: 05telo/books_drf
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
