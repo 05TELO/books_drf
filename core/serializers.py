@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from rest_framework.validators import UniqueTogetherValidator
+
 from .models import Author, Book
 
 
@@ -14,6 +16,13 @@ class BookSerializer(serializers.ModelSerializer):
             "slug",
             "authors",
         )
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Book.objects.all(),
+                fields=["title", "authors"],
+                message="This book already exists",
+            )
+        ]
         lookup_field = "slug"
         extra_kwargs = {"url": {"lookup_field": "slug"}}
 
@@ -30,5 +39,12 @@ class AuthorSerializer(serializers.ModelSerializer):
             "slug",
             "book_list",
         )
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Author.objects.all(),
+                fields=["first_name", "last_name"],
+                message="This author already exists",
+            )
+        ]
         lookup_field = "slug"
         extra_kwargs = {"url": {"lookup_field": "slug"}}
