@@ -25,13 +25,13 @@ after cloning this repository
 
 ## Tests
 
----
+
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/25434486-e7aa663d-75da-4d44-a940-2ccdf55d4079?action=collection%2Ffork&collection-url=entityId%3D25434486-e7aa663d-75da-4d44-a940-2ccdf55d4079%26entityType%3Dcollection%26workspaceId%3D25bf1c5c-460a-46d5-8573-be88f8617905)
 
-___
+
 ### POST
 
----
+
 
 * Add new author
 
@@ -48,9 +48,9 @@ ___
   >>  "authors": [id author, ...]
   >>   }
 
-___
+
 ### GET
-___
+
 
 * Author list
 
