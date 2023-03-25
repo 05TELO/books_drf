@@ -59,7 +59,7 @@ after cloning this repository
 
 * Author
 
-  > http://localhost:8000/api/authors/<slug>
+  > http://localhost:8000/api/authors/[slug]
 
 * Book list
 
@@ -67,7 +67,7 @@ after cloning this repository
 
 * Book
 
-  > http://localhost:8000/api/books/<slug>
+  > http://localhost:8000/api/books/[slug]
 
 ___
 
