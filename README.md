@@ -22,6 +22,15 @@ after cloning this repository
     > poetry run python manage.py runserver
   
 ---
+### Docker
+
+  
+    > docker build -t books-app .
+    
+    
+    > docker run --rm -it -p 8000:8000 books-app
+
+---
 
 ## Tests
 
