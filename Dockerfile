@@ -28,8 +28,10 @@ RUN poetry env use "${PYTHON_VERSION}" \
 RUN poetry install
 
 
-EXPOSE 8080
+EXPOSE 8000
+
+
 
 CMD poetry run python manage.py makemigrations \
     && poetry run python manage.py migrate \
-    && poetry run python manage.py runserver --noreload
+    && poetry run python manage.py runserver 0.0.0.0:8000
